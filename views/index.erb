@@ -1,15 +1,19 @@
 <div class="row">
   <h1>Rock Paper Scissors</h1>
+  <% if @player %>
   <h3>Player <%= @player %>: Choose Your Weapon</h3>
 </div>
 <div class="row">
   <div class="col-sm-4">
-    <a href='/?player1=rock' id="rock"><img src="/img/rock.png"></a>
+    <a href='/?player<%= @player %>=rock<% if @player == 2 %>&player1=<%= @player1 %><% end %>' id="rock"><img src="/img/rock.png"></a>
   </div>
   <div class="col-sm-4">
-    <a href="/?player1=paper" id="paper"><img src="/img/paper.png"></a>
+    <a href="/?player<%= @player %>=paper<% if @player == 2 %>&player1=<%= @player1 %><% end %>" id="paper"><img src="/img/paper.png"></a>
   </div>
   <div class="col-sm-4">
-    <a href="/?player1=scissors" id="scissors"><img src="/img/scissors.png"></a>
+    <a href="/?player<%= @player %>=scissors<% if @player == 2 %>&player1=<%= @player1 %><% end %>" id="scissors"><img src="/img/scissors.png"></a>
   </div>
+  <% else %>
+  <h1 class="win"><%= @winner %></h1>
+  <% end %>
 </div>
