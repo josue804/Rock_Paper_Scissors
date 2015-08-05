@@ -10,17 +10,3 @@ class String
     end
   end
 end
-
-
-
-
-
-# File.open('/db.txt', 'w') do |file|
-#   if File.zero?("db.txt")
-#     file.write(self.concat("," + choice))
-#   else
-#     file.each() do |line|
-#       if to_win.fetch(line)
-#     end
-#   end
-# end
