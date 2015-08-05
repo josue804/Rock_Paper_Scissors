@@ -14,4 +14,5 @@ describe('String#rps') {
   it("returns a tie if both players choose the same option") {
     expect("rock".rps("rock")).to(eq("It's a Tie"))
   }
+  
 }
